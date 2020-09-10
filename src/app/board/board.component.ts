@@ -23,7 +23,7 @@ export class BoardComponent {
   start: boolean = false;
   i: number = 0;
 
-  timeLeft: number = 10;
+  timeLeft: number = 5;
   interval;
 
   // constructor(){
@@ -77,11 +77,11 @@ export class BoardComponent {
     } else {
       this.currentPlayer = (this.currentPlayer === 'X') ? 'O' : 'X';
       if (this.currentPlayer === 'X') {
-        this.timeLeft = 10;
+        this.timeLeft = 5;
         this.pauseTimer();
         this.startTimer();
       } else {
-        this.timeLeft = 10;
+        this.timeLeft = 5;
         this.pauseTimer();
         this.startTimer();
       }
@@ -154,7 +154,7 @@ export class BoardComponent {
       if (this.timeLeft > 0) {
         this.timeLeft--;
       } else {
-        this.timeLeft = 10;
+        this.timeLeft = 5;
       }
     }, 1000)
   }
